@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+</head>
+<body class="dark-theme">
+<nav class="navbar">
+    <div class="navbar__container">
+        <a href="http://127.0.0.1:5000/" id="navbar__logo">Missilero</a>
+        <div class="navbar__toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="navbar__menu">
+            <li class="navbar__item">
+                <a href="http://127.0.0.1:5000/home" class="navbar__links" id="home">Home</a>
+            </li>
+            <li class="navbar__item">
+                <a href="http://127.0.0.1:5000/missile_systems" class="navbar__links" id="missilero_page">Missilero</a>
+            </li>
+            <li class="navbar__btn">
+                <a href="http://127.0.0.1:5000/contact_page" class="button" id="signup">Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="missilero">
+        <h3>Missilero</h3>
+        <p style ="border-bottom: 2px solid #48b1bf"></p>
+        <br>
+<select name="country" id="country" class="form-control">
+    <option selected value disabled>country</option>
+    <option value="Argentina">Argentina</option>
+    <option value="Australia">Australia</option>
+    <option value="Brazil">Brazil</option>
+    <option value="Canada">Canada</option>
+    <option value="China">China</option>
+    <option value="France">France</option>
+    <option value="Germany">Germany</option>
+    <option value="Greece">Greece</option>
+    <option value="India">India</option>
+    <option value="Iran">Iran</option>
+    <option value="Iraq">Iraq</option>
+    <option value="Israel">Israel</option>
+    <option value="Italy">Italy</option>
+    <option value="Japan">Japan</option>
+    <option value="Nigeria">Nigeria</option>
+    <option value="North Korea">North Korea</option>
+    <option value="Norway">Norway</option>
+    <option value="Pakistan">Pakistan</option>
+    <option value="Poland">Poland</option>
+    <option value="Russia">Russia</option>
+    <option value="Serbia">Serbia</option>
+    <option value="South Africa">South Africa</option>
+    <option value="South Korea">South Korea</option>
+    <option value="Sweden">Sweden</option>
+    <option value="Switzerland">Switzerland</option>
+    <option value="Taiwan">Taiwan</option>
+    <option value="Turkey">Turkey</option>
+    <option value="Ukraine">Ukraine</option>
+    <option value="United Kingdom">United Kingdom</option>
+    <option value="United States">United States</option>
+</select>
+<select name="range" id="range">
+    <option selected value disabled>Range</option>
+    <option value="CRBM">CRBM (<300km)</option>
+    <option value="SRBM">SRBM (300-1000 km)</option>
+    <option value="MRBM">MRBM (1000-3000 km)</option>
+    <option value="IRBM">IRBM (3000-5500 km)</option>
+    <option value="ICBM">ICBM (>5500 km)</option>
+</select>
+<select name="category" id="category">
+    <option selected value disabled>Dunham-Wilson Category</option>
+    <option value="cat_1">Cat_1(Ballistic)</option>
+    <option value="cat_2">Cat_2(Ballistic with impulse)</option>
+    <option value="cat_3">Cat_3(Aerodynamic)</option>
+    <option value="cat_4">Cat_4(Aerodynamic with Impulse)</option>
+    <option value="cat_5">Cat_5(Aerodynamic with Sustainer)</option>
+</select>
+
+<table class="table">
+    <tr>
+        <th data-column="missile_name" data-order="desc">Name &#9650</th>
+        <th data-column="missile_cat" data-order="desc">Category &#9650</th>
+        <th data-column="missile_range" data-order="desc">Range &#9650</th>
+        <th data-column="missile_country" data-order="desc">Country &#9650</th>
+    </tr>
+
+    <tbody id="missile-data">
+
+    </tbody>
+</table>
+    </div>
+</div>
+
+
+<script src="/scripts/app.js"></script>
+<noscript>BOOO get js</noscript>
+</body>
+</html>
