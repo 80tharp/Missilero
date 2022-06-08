@@ -11,7 +11,9 @@
 
 body {
     background: var(--bg);
-    color: var(--fontColor);
+    color: var(--font_lt);
+    height: 100%;
+    background-color: #0F2027;
 }
 
 ul {
@@ -24,27 +26,7 @@ li {
     list-style: square;
 }
 
-.light-theme {
-    --bg: var(--bg_lt);
-    --fontColor: var(--font_dk);
-    --btnBg: var(--bg_md);
-    --btnFontColor: var(--font_dk);
-}
 
-.dark-theme {
-    --bg: var(--bg_dk);
-    --fontColor: var(--font_lt);
-    --btnBg: var(--bg_md);
-    --btnFontColor: var(--font_lt);
-}
-body {
-    background: var(--bg);
-    color: var(--fontColor);
-}
-
-/*ul {*/
-/*    font-family: var(--font-head);*/
-/*}*/
 li {
     list-style: circle;
 }
@@ -70,12 +52,6 @@ li {
     padding: 0;
     font-family: 'public sans', sans-serif;
     scroll-behavior: smooth;
-}
-
-body, html {
-
-    height: 100%;
-    background-color: #0F2027;
 }
 
 .navbar {
@@ -175,26 +151,6 @@ body, html {
     cursor: pointer;
 }
 
-.splash-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.flex-item{
-    background-color: #0F2027;
-    opacity: 0.5;
-    padding: 5px;
-    width: 400px;
-    height: 300px;
-    margin: 10px;
-    line-height: 150px;
-    color: #06beb6;
-    text-align: center;
-}
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -245,31 +201,20 @@ body, html {
     background-color: #3e8e41;
 }
 
-.container {
+.missilero_container {
     margin: auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 25px;
     width: 95%;
-    justify-content: center;
-    align-items: center;
-
 }
 
-.missilero {
-    border: 3px #4CAF50;
-    background-color: var(--bg_lt);
-    width: 400px;
-    align-items:center;
-    box-shadow: #2C5364;
-    min-width: 400px;
+.missilero_app {
+    background: var(--bg_lt)
 }
 
-.missilero_map {
-    border: 3px #4CAF50;
-    background-color: var(--bg_lt);
-    width: 400px;
-    align-items:center;
-    box-shadow: #2C5364;
-    flex-grow: 2;
+.missilero_page {
+    background-color: var(--bg_lt)
 
 }
 
@@ -316,3 +261,11 @@ body, html {
     to{bottom:0; opacity: 0;}
 }
 
+th {
+    background-color: #08141a;
+    font-size: large;
+}
+
+tbody {
+    color: #4CAF50;
+}
