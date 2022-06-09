@@ -241,7 +241,24 @@ var missileArray= [
     },
 ]
 
+$('#missile-data td').on('click', function(){
+    var value = $(this).find('td:first');
+    console.log('value', value)
+})
 
+$('#country-drop').change(function(){
+    var value = $(this).val()
+    console.log('value', value)
+    var data = filterTable(value, missileArray)
+    buildTable(data)
+})
+
+$('#search-input').on('keyup', function(){
+    var value = $(this).val()
+    console.log('value:', value)
+    var data = searchTable(value, missileArray)
+    buildTable(data)
+})
 
 $('th').on('click', function(){
     var column = $(this).data('column')
@@ -253,18 +270,14 @@ $('th').on('click', function(){
         $(this).data('order', "asc")
         missileArray2 = missileArray.sort((a,b) => a[column] > b[column] ? 1 : -1)
         text += '&#9660'
-        console.log(missileArray)
     }else{
         $(this).data('order', "desc")
         missileArray = missileArray.sort((a,b) => a[column] < b[column] ? 1 : -1)
         text += '&#9650'
-
     }
     $(this).html(text)
     buildTable(missileArray)
 })
-
-
 
 buildTable(missileArray)
 
@@ -283,4 +296,36 @@ function buildTable(data){
 
     }
 }
+
+function searchTable(value, data){
+    var filteredData = []
+    for (var i = 0; i < data.length; i++){
+        value = value.toLowerCase()
+        var missile = data[i].missile_name.toLowerCase()
+        if (missile.includes(value)){
+            filteredData.push(data[i])
+        }
+    }
+    return filteredData
+}
+
+function filterTable(value, data){
+    var filteredData = []
+    for (var i = 0; i < data.length; i++){
+        value = value.toLowerCase()
+        var missile = data[i].missile_country.toLowerCase()
+        if (missile.includes(value)){
+            filteredData.push(data[i])
+        }
+    }
+    return filteredData
+}
+
+// function buildSheet
+
+// $('tbody').on('click',function(){
+//   var name = $(this).data('name')
+
+//     console.log(name)
+// })
 

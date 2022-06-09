@@ -261,11 +261,40 @@ li {
     to{bottom:0; opacity: 0;}
 }
 
-th {
-    background-color: #08141a;
-    font-size: large;
+.table {
+    padding: 10px;
+    overflow-x: auto;
+    width: 50%;
 }
 
-tbody {
-    color: #4CAF50;
+tbody{
+    background-color: var(--bg_dk);
+    width: 100%;
+    font-size: medium;
+}
+
+td {
+    padding: 10px;
+}
+
+tr:hover {
+    background-color: var(--bg_md);
+}
+
+select {
+    background-color: var(--bg_md);
+    color: var(--font_lt);
+    padding: 15px;
+    font-size: medium;
+    border: none;
+}
+
+input {
+    width: 75%;
+    padding: 10px;
+}
+
+.missilero_func {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
