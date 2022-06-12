@@ -30,72 +30,71 @@
 </nav>
 <div class="missilero_container">
     <div class="missilero_app">
-        <div class="missilero_func">
-            <div class="missilero_input">
-                <input id="search-input" class="form-control" type="text">
-            </div>
-            <div class="missilero_drop">
-                <label for="country-drop">Select a Country</label>
+        <div class="missilero_input">
+        <label for="search-input"></label>
+        <input id="search-input" class="form-control" type="text">
+    </div>
+        <div class="missilero_drop">
+                <label for="country-drop" class="drop-head">Country:</label>
                 <select name="country" id="country-drop" class="form-control">
-                <option value="">All</option>
-                <option value="Argentina">Argentina</option>
-                <option value="Australia">Australia</option>
-                <option value="Brazil">Brazil</option>
-                <option value="Canada">Canada</option>
-                <option value="China">China</option>
-                <option value="France">France</option>
-                <option value="Germany">Germany</option>
-                <option value="Greece">Greece</option>
-                <option value="India">India</option>
-                <option value="Iran">Iran</option>
-                <option value="Iraq">Iraq</option>
-                <option value="Israel">Israel</option>
-                <option value="Italy">Italy</option>
-                <option value="Japan">Japan</option>
-                <option value="Nigeria">Nigeria</option>
-                <option value="North Korea">North Korea</option>
-                <option value="Norway">Norway</option>
-                <option value="Pakistan">Pakistan</option>
-                <option value="Poland">Poland</option>
-                <option value="Russia">Russia</option>
-                <option value="Serbia">Serbia</option>
-                <option value="South Africa">South Africa</option>
-                <option value="South Korea">South Korea</option>
-                <option value="Sweden">Sweden</option>
-                <option value="Switzerland">Switzerland</option>
-                <option value="Taiwan">Taiwan</option>
-                <option value="Turkey">Turkey</option>
-                <option value="Ukraine">Ukraine</option>
-                <option value="United Kingdom">United Kingdom</option>
-                <option value="United States">United States</option>
-            </select>
+                    <option value="All">All</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="Canada">Canada</option>
+                    <option value="China">China</option>
+                    <option value="France">France</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Greece">Greece</option>
+                    <option value="India">India</option>
+                    <option value="Iran">Iran</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="North Korea">North Korea</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Serbia">Serbia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="South Korea">South Korea</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="United States">United States</option>
+                </select>
+                <label for="range-drop" class="drop-head">Range:</label>
                 <select name="range" id="range-drop"  class="form-control">
-                <option selected value disabled>Range</option>
-                <option value="">All</option>
-                <option value="CRBM">CRBM (<300km)</option>
-                <option value="SRBM">SRBM (300-1000 km)</option>
-                <option value="MRBM">MRBM (1000-3000 km)</option>
-                <option value="IRBM">IRBM (3000-5500 km)</option>
-                <option value="ICBM">ICBM (>5500 km)</option>
+                    <option value="All">All</option>
+                    <option value="CRBM">CRBM (<300km)</option>
+                    <option value="SRBM">SRBM (300-1000 km)</option>
+                    <option value="MRBM">MRBM (1000-3000 km)</option>
+                    <option value="IRBM">IRBM (3000-5500 km)</option>
+                    <option value="ICBM">ICBM (>5500 km)</option>
             </select>
+                <label for="category-drop" class="drop-head">Dunham-Wilson Category:</label>
                 <select name="category"  id="category-drop">
-            <option selected value disabled>Dunham-Wilson Category</option>
-            <option value="">All</option>
-            <option value="1">Cat_1(Ballistic)</option>
-            <option value="2">Cat_2(Ballistic with impulse)</option>
-            <option value="3">Cat_3(Aerodynamic)</option>
-            <option value="4">Cat_4(Aerodynamic with Impulse)</option>
-            <option value="5">Cat_5(Aerodynamic with Sustainer)</option>
-        </select>
+                    <option value="All">All</option>
+                    <option value="1">Cat_1 (Ballistic)</option>
+                    <option value="2">Cat_2 (Ballistic with impulse)</option>
+                    <option value="3">Cat_3 (Aerodynamic)</option>
+                    <option value="4">Cat_4 (Aerodynamic with Impulse)</option>
+                    <option value="5">Cat_5 (Aerodynamic with Sustainer)</option>
+                </select>
             </div>
-        </div>
         <div class="missilero_table">
             <table class="table">
                 <tr>
-                    <th data-column="missile_name" data-order="desc">Name &#9650</th>
-                    <th data-column="missile_cat" data-order="desc">Category &#9650</th>
-                    <th data-column="missile_range" data-order="desc">Range &#9650</th>
-                    <th data-column="missile_country" data-order="desc">Country &#9650</th>
+                    <th data-column="missile_name" class="short_head" data-order="desc">Name &#9650</th>
+                    <th data-column="missile_cat" class="short_head" data-order="desc">Category &#9650</th>
+                    <th data-column="missile_range" class="short_head" data-order="desc">Range &#9650</th>
+                    <th data-column="missile_country" class="short_head" data-order="desc">Country &#9650</th>
                 </tr>
                 <tbody id="missile-data">
                 </tbody>
@@ -103,7 +102,14 @@
         </div>
     </div>
     <div class="missilero_sheet">
-        <H1>TEST</H1>
+        <div class="sheet_box">
+            <h1 id="missile_name">Name</h1>
+            <h4 id="missile_range">range</h4>
+            <h4 id="missile_category">Category</h4>
+            <h4 id="missile_country">country</h4>
+            <h4 id="missile_description">description</h4>
+            <h4 id="missile_alt_names"></h4>
+        </div>
     </div>
 </div>
 

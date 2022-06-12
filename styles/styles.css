@@ -179,7 +179,7 @@ li {
 /* Links inside the dropdown */
 .dropdown-content a {
     color: black;
-    padding: 12px;
+    padding: 10px;
     text-decoration: none;
     display: block;
 }
@@ -204,19 +204,18 @@ li {
 .missilero_container {
     margin: auto;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 45% 55%;
     gap: 25px;
     width: 95%;
 }
 
 .missilero_app {
     background: var(--bg_lt);
-    max-width: 50%;
+    max-width: 100%;
 }
 
 .missilero_page {
     background-color: var(--bg_lt)
-
 }
 
 .missilero button.hover {
@@ -225,7 +224,7 @@ li {
 
 #missile_list {
     /*visibility: hidden;*/
-    min-width: 200px;
+    width: 100%;
     margin: auto;
     background-color: #2C5364;
     color: white;
@@ -262,15 +261,11 @@ li {
     to{bottom:0; opacity: 0;}
 }
 
-.table {
-    padding: 10px;
-    overflow-x: auto;
-    width: 50%;
-}
+
 
 tbody{
     background-color: var(--bg_dk);
-    width: 100%;
+    table-layout: fixed;
     font-size: medium;
     padding: 25px;
 }
@@ -292,15 +287,49 @@ select {
 }
 
 input {
-    width: 75%;
+    width: 100%;
     padding: 10px;
 }
 
-.missilero_func {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+.missilero_app{
+    min-width: 100%;
+    padding: 10px;
 }
 
-#search-input {
-    padding: 15px;
+.missilero_drop{
+    padding-top: 10px;
+}
+
+.missilero_table {
+    width: 100%;
+    table-layout: fixed;
+    padding-top: 10px;
+    text-align: center;
+
+}
+
+/*th{*/
+/*    width: 100%;*/
+/*    table-layout: fixed;*/
+/*}*/
+
+.short_head {
+    width: 10%;
+}
+
+#range-drop {
+    max-width: 100px;
+}
+
+#category-drop {
+    max-width: 225px;
+}
+
+#country-drop {
+    max-width: 150px;
+}
+
+.missilero_sheet {
+
+    display: flex;
 }
