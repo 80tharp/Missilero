@@ -210,7 +210,8 @@ li {
 }
 
 .missilero_app {
-    background: var(--bg_lt)
+    background: var(--bg_lt);
+    max-width: 50%;
 }
 
 .missilero_page {

@@ -1,3 +1,5 @@
+
+//INGRESS Module
 var missileArray= [
     {
         "missile_cat": "6",
@@ -243,39 +245,24 @@ var missileArray= [
 //sets missile array to built in json
 //NEEDS TO BE SWAPPED WITH API CALL
 
-$('#missile-data td').on('click', function(){
-    var value = $(this).find('td:first');
-})
-//Trying to get the rows to load the missile sheet
+//builds table from JSON
+function buildTable(data){
+    var table = document.getElementById('missile-data')
+    table.innerHTML = ''
+    for (var i = 0; i < data.length; i++){
+        var row = `<tr>
+                          <td>${data[i].missile_name}</td>
+                          <td>${data[i].missile_cat}</td>
+                          <td>${data[i].missile_range}</td>
+                          <td>${data[i].missile_country}</td>
+                    </tr>`
+        table.innerHTML += row
+    }
+}
+// END OF INGRESS Module
 
-$('#country-drop').change(function(){
-    var value = $(this).val()
-    console.log(value)
-    var data = filterCountry(value, missileArray)
-    buildTable(data)
-})
-
-$('#range-drop').change(function(){
-    var value = $(this).val()
-    console.log(value)
-    var data = filterRange(value, missileArray)
-    buildTable(data)
-})
-
-$('#category-drop').change(function(){
-    var value = $(this).val()
-    console.log(value)
-    var data = filterCat(value, missileArray)
-    buildTable(data)
-})
-
-$('#search-input').on('keyup', function(){
-    var value = $(this).val()
-    console.log('value:', value)
-    var data = searchTable(value, missileArray)
-    buildTable(data)
-})
-
+//SORT AND FILTER Module
+//Sorts column values when heading is clicked
 $('th').on('click', function(){
     var column = $(this).data('column')
     var order = $(this).data('order')
@@ -294,33 +281,24 @@ $('th').on('click', function(){
     $(this).html(text)
     buildTable(missileArray)
 })
-buildTable(missileArray)
 
-function buildTable(data){
-    var table = document.getElementById('missile-data')
-    table.innerHTML = ''
-    for (var i = 0; i < data.length; i++){
-        var row = `<tr>
-                          <td>${data[i].missile_name}</td>
-                          <td>${data[i].missile_cat}</td>
-                          <td>${data[i].missile_range}</td>
-                          <td>${data[i].missile_country}</td>
-                    </tr>`
-        table.innerHTML += row
-    }
-}
-
+//Filters Rows based on text search of name
 function searchTable(value, data){
     var filteredData = []
     for (var i = 0; i < data.length; i++){
         value = value.toLowerCase()
-        var missile = data[i].missile_name.toLowerCase()
-        if (missile.includes(value)){
-            filteredData.push(data[i])
-        }
+        var name = data[i].missile_name.toLowerCase()
+        if (name.includes(value)){
+            filteredData.push(data[i])  }
     }
     return filteredData
 }
+$('#search-input').on('keyup', function(){
+    var value = $(this).val()
+    console.log('value:', value)
+    var data = searchTable(value, missileArray)
+    buildTable(data)
+})
 
 function filterCountry(value, data){
     var filteredCountry = []
@@ -333,6 +311,30 @@ function filterCountry(value, data){
     }
     return filteredCountry
 }
+$('#country-drop').change(function(){
+    var value = $(this).val()
+    console.log(value)
+    var data = filterCountry(value, missileArray)
+    buildTable(data)
+})
+
+function filterRange(value, data) {
+    var filteredRange = []
+    for (var i = 0; i < data.length; i++) {
+        value = value.toLowerCase()
+        var missileRange = data[i].missile_range.toLowerCase()
+        if (missileRange.includes(value)) {
+            filteredRange.push(data[i])
+        }
+    }
+    return filteredRange
+}
+$('#range-drop').change(function(){
+    var value = $(this).val()
+    console.log(value)
+    var data = filterRange(value, missileArray)
+    buildTable(data)
+})
 
 function filterCat(value, data){
     var filteredCat = []
@@ -345,15 +347,19 @@ function filterCat(value, data){
     }
     return filteredCat
 }
+$('#category-drop').change(function(){
+    var value = $(this).val()
+    console.log(value)
+    var data = filterCat(value, missileArray)
+    buildTable(data)
+})
+//END OF SORT AND FILTER Module
 
-function filterRange(value, data){
-    var filteredRange = []
-    for (var i = 0; i < data.length; i++) {
-        value = value.toLowerCase()
-        var missileRange = data[i].missile_range.toLowerCase()
-        if (missileRange.includes(value)) {
-            filteredRange.push(data[i])
-        }
-    }
-    return filteredRange
-}
+
+//DISPLAY Module
+$('#missile-data td').on('click', function(){
+    var value = $(this).find('td:first');
+})
+//END OF Display Module
+
+buildTable(missileArray)
