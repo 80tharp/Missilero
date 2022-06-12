@@ -1,6 +1,6 @@
 var missileArray= [
     {
-        "missile_cat": 6,
+        "missile_cat": "6",
         "missile_country": "russia",
         "missile_descript": "1",
         "missile_id": 1,
@@ -8,31 +8,31 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "russia",
         "missile_descript": "2",
         "missile_id": 2,
         "missile_name": "SS-22",
-        "missile_range": "CRBM"
+        "missile_range": "SRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "russia",
         "missile_descript": "3",
         "missile_id": 3,
         "missile_name": "SS-23",
-        "missile_range": "CRBM"
+        "missile_range": "SRBM"
     },
     {
-        "missile_cat": 1,
+        "missile_cat": "1",
         "missile_country": "russia",
         "missile_descript": "4",
         "missile_id": 4,
         "missile_name": "SS-24",
-        "missile_range": "CRBM"
+        "missile_range": "SRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "russia",
         "missile_descript": "5",
         "missile_id": 5,
@@ -40,7 +40,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "russia",
         "missile_descript": "6",
         "missile_id": 6,
@@ -48,15 +48,15 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 1,
+        "missile_cat": "1",
         "missile_country": "russia",
         "missile_descript": "7",
         "missile_id": 7,
         "missile_name": "SS-27",
-        "missile_range": "CRBM"
+        "missile_range": "MRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "russia",
         "missile_descript": "8",
         "missile_id": 8,
@@ -64,7 +64,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "russia",
         "missile_descript": "9",
         "missile_id": 9,
@@ -80,15 +80,15 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "russia",
         "missile_descript": "11",
         "missile_id": 11,
         "missile_name": "SS-31",
-        "missile_range": "CRBM"
+        "missile_range": "MRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "russia",
         "missile_descript": "12",
         "missile_id": 12,
@@ -96,7 +96,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 1,
+        "missile_cat": "1",
         "missile_country": "russia",
         "missile_descript": "22",
         "missile_id": 13,
@@ -104,7 +104,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "russia",
         "missile_descript": "33",
         "missile_id": 14,
@@ -112,7 +112,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "russia",
         "missile_descript": "44",
         "missile_id": 15,
@@ -120,15 +120,15 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 1,
+        "missile_cat": "1",
         "missile_country": "China",
         "missile_descript": "55",
         "missile_id": 16,
         "missile_name": "KN-2",
-        "missile_range": "CRBM"
+        "missile_range": "MRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "China",
         "missile_descript": "66",
         "missile_id": 17,
@@ -136,7 +136,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "China",
         "missile_descript": "77",
         "missile_id": 18,
@@ -144,7 +144,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 1,
+        "missile_cat": "1",
         "missile_country": "China",
         "missile_descript": "88",
         "missile_id": 19,
@@ -152,7 +152,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "China",
         "missile_descript": "99",
         "missile_id": 20,
@@ -160,7 +160,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "China",
         "missile_descript": "00",
         "missile_id": 21,
@@ -168,7 +168,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 1,
+        "missile_cat": "1",
         "missile_country": "United States",
         "missile_descript": "111",
         "missile_id": 22,
@@ -176,7 +176,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "United States",
         "missile_descript": "222",
         "missile_id": 23,
@@ -184,7 +184,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "United States",
         "missile_descript": "333",
         "missile_id": 24,
@@ -192,7 +192,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 1,
+        "missile_cat": "1",
         "missile_country": "United States",
         "missile_descript": "444",
         "missile_id": 25,
@@ -200,7 +200,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "United States",
         "missile_descript": "555",
         "missile_id": 26,
@@ -208,15 +208,15 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "United States",
         "missile_descript": "666",
         "missile_id": 27,
         "missile_name": "patriot6",
-        "missile_range": "CRBM"
+        "missile_range": "MRBM"
     },
     {
-        "missile_cat": 1,
+        "missile_cat": "1",
         "missile_country": "United States",
         "missile_descript": "777",
         "missile_id": 28,
@@ -224,7 +224,7 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 2,
+        "missile_cat": "2",
         "missile_country": "United States",
         "missile_descript": "888",
         "missile_id": 29,
@@ -232,24 +232,40 @@ var missileArray= [
         "missile_range": "CRBM"
     },
     {
-        "missile_cat": 3,
+        "missile_cat": "3",
         "missile_country": "United States",
         "missile_descript": "999",
         "missile_id": 30,
         "missile_name": "patriot9",
         "missile_range": "CRBM"
-    },
+    }
 ]
+//sets missile array to built in json
+//NEEDS TO BE SWAPPED WITH API CALL
 
 $('#missile-data td').on('click', function(){
     var value = $(this).find('td:first');
-    console.log('value', value)
 })
+//Trying to get the rows to load the missile sheet
 
 $('#country-drop').change(function(){
     var value = $(this).val()
-    console.log('value', value)
-    var data = filterTable(value, missileArray)
+    console.log(value)
+    var data = filterCountry(value, missileArray)
+    buildTable(data)
+})
+
+$('#range-drop').change(function(){
+    var value = $(this).val()
+    console.log(value)
+    var data = filterRange(value, missileArray)
+    buildTable(data)
+})
+
+$('#category-drop').change(function(){
+    var value = $(this).val()
+    console.log(value)
+    var data = filterCat(value, missileArray)
     buildTable(data)
 })
 
@@ -278,7 +294,6 @@ $('th').on('click', function(){
     $(this).html(text)
     buildTable(missileArray)
 })
-
 buildTable(missileArray)
 
 function buildTable(data){
@@ -292,8 +307,6 @@ function buildTable(data){
                           <td>${data[i].missile_country}</td>
                     </tr>`
         table.innerHTML += row
-
-
     }
 }
 
@@ -309,23 +322,38 @@ function searchTable(value, data){
     return filteredData
 }
 
-function filterTable(value, data){
-    var filteredData = []
-    for (var i = 0; i < data.length; i++){
+function filterCountry(value, data){
+    var filteredCountry = []
+    for (var i = 0; i < data.length; i++) {
         value = value.toLowerCase()
-        var missile = data[i].missile_country.toLowerCase()
-        if (missile.includes(value)){
-            filteredData.push(data[i])
+        var missileCountry = data[i].missile_country.toLowerCase()
+        if (missileCountry.includes(value)) {
+            filteredCountry.push(data[i])
         }
     }
-    return filteredData
+    return filteredCountry
 }
 
-// function buildSheet
+function filterCat(value, data){
+    var filteredCat = []
+    for (var i = 0; i < data.length; i++) {
+        value = value.toLowerCase()
+        var missileCat = data[i].missile_cat.toLowerCase()
+        if (missileCat.includes(value)) {
+            filteredCat.push(data[i])
+        }
+    }
+    return filteredCat
+}
 
-// $('tbody').on('click',function(){
-//   var name = $(this).data('name')
-
-//     console.log(name)
-// })
-
+function filterRange(value, data){
+    var filteredRange = []
+    for (var i = 0; i < data.length; i++) {
+        value = value.toLowerCase()
+        var missileRange = data[i].missile_range.toLowerCase()
+        if (missileRange.includes(value)) {
+            filteredRange.push(data[i])
+        }
+    }
+    return filteredRange
+}

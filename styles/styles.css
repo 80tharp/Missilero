@@ -271,6 +271,7 @@ tbody{
     background-color: var(--bg_dk);
     width: 100%;
     font-size: medium;
+    padding: 25px;
 }
 
 td {
@@ -297,4 +298,8 @@ input {
 .missilero_func {
     display: grid;
     grid-template-columns: auto auto auto auto;
+}
+
+#search-input {
+    padding: 15px;
 }
