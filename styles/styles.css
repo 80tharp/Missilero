@@ -10,41 +10,13 @@
 }
 
 body {
-    background: var(--bg);
+    background: var(--bg_md);
     color: var(--font_lt);
     height: 100%;
     background-color: #0F2027;
 }
 
-ul {
-    font-family: var(--font-head);}
-li {
-    list-style: circle;
-}
 
-.list {
-    list-style: square;
-}
-
-
-li {
-    list-style: circle;
-}
-
-.list {
-    list-style: square;
-}
-.btn {
-    position: absolute;
-    top: 20px;
-    left: 250px;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    border: none;
-    color: var(--font_lt);
-    background-color: var(--font_dk);
-}
 
 *{
     box-sizing: border-box;
@@ -74,13 +46,13 @@ li {
     height: 80px;
     z-index: 0;
     width: 100%;
-    max-width: 1300px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 50px;
 }
 
 #navbar__logo {
-    background-color: aquamarine;
+    background-color: #7FFFD4FF;
     background-image: linear-gradient(to top, #48b1bf, #06beb6);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -88,7 +60,8 @@ li {
     align-items: center;
     cursor: pointer;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 3rem;
+    font-style: italic;
 }
 
 .navbar__menu {
@@ -308,28 +281,78 @@ input {
 
 }
 
-/*th{*/
-/*    width: 100%;*/
-/*    table-layout: fixed;*/
-/*}*/
-
 .short_head {
     width: 10%;
 }
 
 #range-drop {
-    max-width: 100px;
-}
-
-#category-drop {
-    max-width: 225px;
+    max-width: 30%;
 }
 
 #country-drop {
-    max-width: 150px;
+    max-width: 30%;
+
+}#type-drop {
+    max-width: 30%;
 }
 
-.missilero_sheet {
+ .missilero_sheet {
+     max-width: 100%;
+ }
 
-    display: flex;
+.sheet_box {
+    display: grid;
+    justify-content: center;
+
+}
+
+.sheet-name {
+
+}
+
+#missile_img {
+    padding-left: 10%;
+    max-width: 90%;
+}
+
+.sheet-data-wrapper{
+    padding-top: 15px;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: #08141a;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.sheet-data {
+    padding: 10px;
+    display: grid;
+}
+
+.sheet-desc-title {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.sheet-desc-data {
+    font-size: 1.25rem;
+}
+
+.desc-data {
+    background-color: #08141a;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#description-title {
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+#description-data {
+    font-size: 1.25rem;
 }

@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Missilero</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="manifest" href="static/site.webmanifest">
     <script
             src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
@@ -35,9 +39,9 @@
         <input id="search-input" class="form-control" type="text">
     </div>
         <div class="missilero_drop">
-                <label for="country-drop" class="drop-head">Country:</label>
+                <label for="country-drop" class="drop-head"></label>
                 <select name="country" id="country-drop" class="form-control">
-                    <option value="All">All</option>
+                    <option value="All">Country</option>
                     <option value="Argentina">Argentina</option>
                     <option value="Australia">Australia</option>
                     <option value="Brazil">Brazil</option>
@@ -69,32 +73,37 @@
                     <option value="United Kingdom">United Kingdom</option>
                     <option value="United States">United States</option>
                 </select>
-                <label for="range-drop" class="drop-head">Range:</label>
+                <label for="range-drop" class="drop-head"></label>
                 <select name="range" id="range-drop"  class="form-control">
-                    <option value="All">All</option>
+                    <option value="All">Range Class</option>
                     <option value="CRBM">CRBM (<300km)</option>
                     <option value="SRBM">SRBM (300-1000 km)</option>
                     <option value="MRBM">MRBM (1000-3000 km)</option>
                     <option value="IRBM">IRBM (3000-5500 km)</option>
                     <option value="ICBM">ICBM (>5500 km)</option>
-            </select>
-                <label for="category-drop" class="drop-head">Dunham-Wilson Category:</label>
-                <select name="category"  id="category-drop">
-                    <option value="All">All</option>
-                    <option value="1">Cat_1 (Ballistic)</option>
-                    <option value="2">Cat_2 (Ballistic with impulse)</option>
-                    <option value="3">Cat_3 (Aerodynamic)</option>
-                    <option value="4">Cat_4 (Aerodynamic with Impulse)</option>
-                    <option value="5">Cat_5 (Aerodynamic with Sustainer)</option>
+                    <option value="SLBM">SLBM</option>
                 </select>
-            </div>
+            <label for="type-drop" class="short-head"></label>
+                <select name="type" id="type-drop"  class="form-control">
+                    <option value="All">Type</option>
+                    <option value="ALBM">ALBM</option>
+                    <option value="ALCM">ALCM</option>
+                    <option value="ASCM">ASCM</option>
+                    <option value="Cruise Missile">Cruise Missile</option>
+                    <option value="GLCM">GLCM</option>
+                    <option value="HGV">HGV</option>
+                    <option value="LACM">LACM</option>
+                    <option value="MEBM">MEBM</option>
+                    <option value="SLBM">SLBM</option>
+                </select>
+        </div>
         <div class="missilero_table">
             <table class="table">
                 <tr>
                     <th data-column="missile_name" class="short_head" data-order="desc">Name &#9650</th>
-                    <th data-column="missile_cat" class="short_head" data-order="desc">Category &#9650</th>
                     <th data-column="missile_range" class="short_head" data-order="desc">Range &#9650</th>
                     <th data-column="missile_country" class="short_head" data-order="desc">Country &#9650</th>
+                    <th data-column="missile_type" class="short_head" data-order="desc">Type &#9650</th>
                 </tr>
                 <tbody id="missile-data">
                 </tbody>
@@ -103,12 +112,35 @@
     </div>
     <div class="missilero_sheet">
         <div class="sheet_box">
-            <h1 id="missile_name">Name</h1>
-            <h4 id="missile_range">range</h4>
-            <h4 id="missile_category">Category</h4>
-            <h4 id="missile_country">country</h4>
-            <h4 id="missile_description">description</h4>
-            <h4 id="missile_alt_names"></h4>
+            <h1 id="missile_name" class="sheet-name">Name</h1>
+            <img src="" alt="image of missile" id="missile_img">
+            <div class="sheet-data-wrapper">
+                <dl class="sheet-data">
+                    <dt id="sheet-range-miles" class="sheet-desc-title">Range(Miles):</dt>
+                    <dd id="sheet-range-miles-data" class="sheet-desc-data"></dd>
+                </dl>
+                <dl class="sheet-data">
+                    <dt id="sheet-range-km" class="sheet-desc-title">Range(KM):</dt>
+                    <dd id="sheet-range-km-data" class="sheet-desc-data"></dd>
+                </dl>
+                <dl class="sheet-data">
+                    <dt id="sheet-range-class" class="sheet-desc-title">Class:</dt>
+                    <dd id="sheet-range-class-data" class="sheet-desc-data"></dd>
+                </dl>
+                <dl class="sheet-data">
+                    <dt id="sheet-country" class="sheet-desc-title">Country:</dt>
+                    <dd id="sheet-country-data" class="sheet-desc-data"></dd>
+                </dl>
+                <dl class="sheet-data">
+                    <dt id="sheet-type" class="sheet-desc-title">Type:</dt>
+                    <dd id="sheet-type-data" class="sheet-desc-data"></dd>
+                </dl>
+            </div>
+            <div class="desc-data">
+                <a id="description-title">Description:</a>
+                <br>
+                <a id="description-data"></a>
+            </div>
         </div>
     </div>
 </div>
