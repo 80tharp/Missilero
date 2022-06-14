@@ -300,11 +300,12 @@ input {
      max-width: 100%;
  }
 
-.sheet_box {
-    display: grid;
+#sheet-box {
+    display: none;
     justify-content: center;
-
 }
+
+
 
 .sheet-name {
 
