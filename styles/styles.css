@@ -297,6 +297,8 @@ input {
 }
 
  .missilero_sheet {
+     position: fixed;
+     left: 46%;
      max-width: 100%;
  }
 
@@ -356,4 +358,44 @@ input {
 }
 #description-data {
     font-size: 1.25rem;
+}
+
+
+/* Style the tab */
+.nav-tab {
+    overflow: hidden;
+    color: var(--font_lt);
+    background-color: var(--bg_md);
+
+}
+
+/* Style the buttons that are used to open the tab content */
+.nav-tab button {
+    background-color: var(--bg_md);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    color: var(--font_lt);
+    font-size: medium;
+}
+
+/* Change background color of buttons on hover */
+.nav-tab button:hover {
+    background-color: var(--bg_lt);
+}
+
+/* Create an active/current tablink class */
+.nav-tab button.active {
+    background-color: var(--bg_lt);
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
 }

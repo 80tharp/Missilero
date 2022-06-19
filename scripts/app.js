@@ -606,6 +606,52 @@ $('#missile-data').on('click','tr', function(){
 });
 //END OF Display Module
 
+
+function openPage(evt, pageName) {
+    // Declare all variables
+    var i, tabcontent, tablinks;
+
+    // Get all elements with class="tabcontent" and hide them
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // Get all elements with class="tablinks" and remove the class "active"
+    tablinks = document.getElementsByClassName("link-tab");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    // Show the current tab, and add an "active" class to the button that opened the tab
+    document.getElementById(pageName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+
+// var wrap = $("#wrap");
+//
+// wrap.on("scroll", function(e) {
+//
+//     if (this.scrollTop > 147) {
+//         wrap.addClass("fix-search");
+//     } else {
+//         wrap.removeClass("fix-search");
+//     }
+
+$(document).ready(function() {
+    var theLoc = $('missilero_sheet').position().top;
+    $(window).scroll(function() {
+        if (theLoc >= $(window).scrollTop()) {
+            $('missilero_sheet').style.position = 'absolute';
+        } else {$('missilero_sheet').style.position = 'fixed';
+        }
+    });
+});
+
+
+
+
+
 buildTable(missileArray)
 
 
