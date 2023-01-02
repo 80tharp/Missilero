@@ -142,6 +142,34 @@ body {
     cursor: pointer;
 }
 
+.main-wrapper {
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 1rem;
+    height: auto;
+}
+
+.main-card {
+    text-align: center;
+    display: flex;
+    padding: 3rem;
+    background-color: var(--bg_md);
+}
+
+.main-box {
+    width: 50%;
+}
+
+.main-box {
+    font-size: xx-large;
+}
+
+
+
+
 .dropbtn {
     background-color: #4CAF50;
     color: white;
@@ -448,15 +476,12 @@ input {
 }
 
 .footer_wrapper {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
     background: #0F2027;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #0F2027, #203A43, #2C5364);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #0F2027, #203A43, #2C5364); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     margin-top: 50px;
     height: 100px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
